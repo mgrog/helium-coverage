@@ -12,6 +12,7 @@
   },
   "eslintConfig": {
     "extends": "preact",
+    "react/display-name": false,
     "ignorePatterns": [
       "build/"
     ]

@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import styled from '@emotion/styled';
+import { useState, useEffect } from 'react';
 
 import Info from './Info';
 
@@ -10,6 +11,17 @@ const SignalDataView = ({ signalData, locationName }) => {
     margin-right: 0.5rem;
     width: 1.2rem;
   `;
+
+  const Detail = styled.div`
+    font-size: 0.85em;
+    color: #afafd0;
+  `;
+
+  const [isEstimated, setIsEstimated] = useState(false);
+
+  useEffect(() => {
+    setIsEstimated(signalData.estimated_rssi);
+  }, [signalData]);
 
   const getRssi = data => {
     const value = data?.measured_rssi || data?.estimated_rssi;
@@ -34,8 +46,15 @@ const SignalDataView = ({ signalData, locationName }) => {
         <Info.Body fontSize={'1em'}>{locationName}</Info.Body>
       </Info.Box>
       <Info.Box title={`RSSI/SNR`}>
-        <Info.Body fontSize={'1.2em'}>{getRssi(signalData)}</Info.Body>
-        <Info.Body fontSize={'1.2em'}>{getSnr(signalData)}</Info.Body>
+        <Info.Body fontSize={'1.1em'}>
+          {getRssi(signalData)}
+          {isEstimated ? '*' : ''}
+        </Info.Body>
+        <Info.Body fontSize={'1.1em'}>
+          {getSnr(signalData)}
+          {isEstimated ? '*' : ''}
+        </Info.Body>
+        {isEstimated ? <Info.SubTitle>(*) estimated</Info.SubTitle> : null}
       </Info.Box>
       <Info.Box title={'Status'}>
         <div css={{ display: 'flex', alignItems: 'center' }}>
