@@ -1,0 +1,102 @@
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: auto;
+  background-color: #e5e5e5;
+  border: solid #bfc2c7 1px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+h3 {
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.dark-bg {
+  background-color: #1d1d1d;
+}
+
+.light-gray-bg {
+  background-color: #e5e5e5;
+}
+
+.accent-green {
+  background-color: #29d391;
+}
+
+.danger-red {
+  background-color: #eb1e1d;
+}
+
+.accent-purple {
+  background-color: #a334fa;
+}
+
+.accent-blue-text {
+  color: #474efd;
+}
+
+.widget-header {
+  align-items: center;
+  display: flex;
+  font-weight: 600;
+  justify-content: flex-end;
+  margin: 0.25rem;
+  min-width: 28rem;
+  position: absolute;
+  width: calc(100% - 1rem);
+}
+
+.widget-header img {
+  margin-left: 0.25rem;
+}
+
+.center-area {
+  display: block;
+  margin: auto;
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 200ms ease-out;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+.fade-exit-done {
+  opacity: 0;
+}
+
+@media only screen and (max-width: 464px) {
+  html {
+    font-size: 10px;
+  }
+}
