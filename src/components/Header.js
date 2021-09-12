@@ -50,7 +50,7 @@ const Header = ({ text, reset, showReset, visible }) => {
         {text}
         {showReset ? (
           <ResetBtn onClick={() => reset()}>
-            <Img src={resetIcon} alt="logo spinner"></Img>
+            <Img src={resetIcon} alt="logo spinner" />
           </ResetBtn>
         ) : null}
       </Title>
