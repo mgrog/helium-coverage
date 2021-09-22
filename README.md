@@ -72,12 +72,10 @@ export default App;
 
 ## Useful Info
 
-This project makes use of the [zoid framework](https://github.com/krakenjs/zoid)
-You can find additional bindings and examples for Angular and Vue there, amongst other helpful things.
+This project makes use of the [zoid framework](https://github.com/krakenjs/zoid).
+There you can find additional bindings and examples for Angular and Vue, amongst other helpful things.
 
 ## For Hosting
-
-In the project directory, you can run:
 
 ### `npm run build`
 
