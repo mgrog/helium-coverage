@@ -122,7 +122,7 @@ function App() {
 
   const loadSignalData = (locName, lat, lon) => {
     setLocationName(locName);
-    return fetch(`http://localhost:4000/api/v1/coverage/geo/${lat},${lon}`)
+    return fetch(`https://mappers.helium.com/api/v1/coverage/geo/${lat},${lon}`)
       .then(response => {
         if (response.ok) {
           return response.json();
